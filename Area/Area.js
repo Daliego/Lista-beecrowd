@@ -1,29 +1,25 @@
-import { print, input } from "./io_utils.js";
+var input = require('fs').readFileSync('/dev/stdin', 'utf8');
+var lines = input.split('\n');
 
 function main() {
-
-    const A = Number(input('Digite o valor de A:'))
-    const B = Number(input('Digite o valor de B:'))
-    const C = Number(input('Digite o valor de C:'))
-    const pi = 3.14159
+    
+    const A = Number(lines[2]).toFixed(1)
+    const B = Number(lines[0]).toFixed(1)
+    const C = Number(lines[1]).toFixed(1)
+    
+    const pi = Number(3.14159)
 
     const area_triangle = (A * B) / 2
-    const area_circle = pi * C ** 2
-    const area_trapezium = ((B + A) * C) / 2
-    const area_square = B ** 2
+    const area_circle = pi * C * C 
+    const area_trapezium = ((A + B) * C) / 2
+    const area_square = B * B
     const area_retangle = A * B
 
-
-
-    print(`Triangulo:  ${area_triangle}`)
-    print(`Circulo:  ${area_circle}`)
-    print(`trapezio:  ${area_trapezium}`)
-    print(`Quadrado:  ${area_square}`)
-    print(`Retangulo:  ${area_retangle}`)
-
-
-
-
+    console.log(`TRIANGULO: ${area_triangle.toFixed(3)}`);
+    console.log(`CIRCULO: ${area_circle.toFixed(3)}`);
+    console.log(`TRAPEZIO: ${area_trapezium.toFixed(3)}`);
+    console.log(`QUADRADO: ${area_square.toFixed(3)}`);
+    console.log(`RETANGULO: ${area_retangle.toFixed(3)}`);
 
 }
-main()
+main();
