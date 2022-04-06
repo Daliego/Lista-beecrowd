@@ -5,7 +5,7 @@
   "name": "diego",
   "version": "1.0.0",
   "type": "module",
-  "main": "distance.js",
+  "main": "fuel.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
